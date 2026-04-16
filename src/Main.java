@@ -1,0 +1,233 @@
+public class Main
+{
+    static void main()
+    {
+        //average method testing
+        int[] nums = {6, 4, 0, 3, 9};
+        double avg = ArrayAlgorithms.average(nums);
+        System.out.println(avg);
+        int[] nums2 = {4, 6, 7, 10, -2, 17, 5};
+        double avg2 = ArrayAlgorithms.average(nums2);
+        System.out.println(avg2);
+        int[] nums3 = {7, 3};
+        double avg3 = ArrayAlgorithms.average(nums3);
+        System.out.println(avg3);
+
+        System.out.println("\n --------------------------- \n");
+
+        //minimum method testing
+        int[] nums4 = {6, 4, 3, 9, 2, 5};
+        int min = ArrayAlgorithms.minimum(nums4);
+        System.out.println(min);
+        int[] nums5 = {-4, 5, -7, 3};
+        int min2 = ArrayAlgorithms.minimum(nums5);
+        System.out.println(min2);
+        int[] nums6 = {0, -5, -4, -6};
+        int min3 = ArrayAlgorithms.minimum(nums6);
+        System.out.println(min3);
+        int[] nums7 = {10, 40, 20, 30, 50};
+        int min4 = ArrayAlgorithms.minimum(nums7);
+        System.out.println(min4);
+
+        System.out.println("\n --------------------------- \n");
+
+        //howManyContain method testing
+        String[] words = {"apple", "banana", "cabana", "diva", "elephant"};
+        int count = ArrayAlgorithms.howManyContain(words, "a");
+        System.out.println(count);
+        int count2 = ArrayAlgorithms.howManyContain(words, "an");
+        System.out.println(count2);
+        int count3 = ArrayAlgorithms.howManyContain(words, "ban");
+        System.out.println(count3);
+        int count4 = ArrayAlgorithms.howManyContain(words, "h");
+        System.out.println(count4);
+        int count5 = ArrayAlgorithms.howManyContain(words, "k");
+        System.out.println(count5);
+        System.out.println("---------");
+        String[] words2 = {"i", "am", "sam"};
+        int count6 = ArrayAlgorithms.howManyContain(words2, "i");
+        System.out.println(count6);
+        int count7 = ArrayAlgorithms.howManyContain(words2, "am");
+        System.out.println(count7);
+        int count8 = ArrayAlgorithms.howManyContain(words2, "sam");
+        System.out.println(count8);
+        int count9 = ArrayAlgorithms.howManyContain(words2, "sam i am");
+        System.out.println(count9);
+
+        System.out.println("\n --------------------------- \n");
+
+        //stringToArray method testing
+        String word = "Computer Science!";
+        String[] letters = ArrayAlgorithms.stringToArray(word);
+        for (int i = 0; i < letters.length; i++) {
+            System.out.print(letters[i]);
+        }
+        System.out.println();
+        String word2 = "* ** *** **** ***** ******";
+        String[] letters2 = ArrayAlgorithms.stringToArray(word2);
+        for (int i = 0; i < letters2.length; i++) {
+            System.out.print(letters2[i]);
+        }
+
+        System.out.println("\n --------------------------- \n");
+
+        //you get the point, every section a different method is tested
+        String[] words3 = {"apple", "banana", "cabana", "diva", "elephant"};
+        ArrayAlgorithms.reversePrint(words3);
+        System.out.println();
+        String[] words4 = {"123", "456", "789",};
+        ArrayAlgorithms.reversePrint(words4);
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] nums8 = {1, 2, 3, 4, 5, 6};
+        int[] nums9 = {10, 11, 12, 13, 14, 15, 16, 17};
+        int[] combined = ArrayAlgorithms.combine(nums8, nums9);
+        for (int i = 0; i < combined.length; i++) {
+            System.out.print(combined[i] + " ");
+        }
+        System.out.println();
+        System.out.println("combined list has " + combined.length + " elements");
+
+        int[] nums10 = {5, 8, 6, 2};
+        int[] nums11 = {1, 7, 10, 0, 9};
+        int[] combined2 = ArrayAlgorithms.combine(nums10, nums11);
+        for (int i = 0; i < combined2.length; i++) {
+            System.out.print(combined2[i] + " ");
+        }
+        System.out.println();
+        System.out.println("combined list has " + combined2.length + " elements");
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] grades1 = {34, 78, 91, 34, 76, 45};
+        ArrayAlgorithms.bookEnd(grades1, 20);
+        for (int i = 0; i < grades1.length; i++) {
+            System.out.print(grades1[i]+ " ");
+        }
+        System.out.println();
+        int[] grades2 = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+        ArrayAlgorithms.bookEnd(grades2, 0);
+        for (int i = 0; i < grades2.length; i++) {
+            System.out.print(grades2[i]+ " ");
+        }
+        System.out.println();
+        int[] grades3 = {50};
+        ArrayAlgorithms.bookEnd(grades3, 100);
+        for (int i = 0; i < grades3.length; i++) {
+            System.out.print(grades3[i]+ " ");
+        }
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] nums12 = {5, 10, 15, 12, 2, 4};
+        ArrayAlgorithms.multiplyBy(nums12, 6);
+// original nums15 array IS modified
+        for (int i = 0; i < nums12.length; i++) {
+            System.out.print(nums12[i] + " ");
+        }
+        System.out.println();
+        int[] nums13 = {-5, -7, 14, 0, 5, 20, -30};
+        ArrayAlgorithms.multiplyBy(nums13, -12);
+// original nums16 array IS modified
+        for (int i = 0; i < nums13.length; i++) {
+            System.out.print(nums13[i] + " ");
+        }
+
+        System.out.println("\n\n --------------------------- \n");
+
+        int[] nums14 = {5, 10, 15, 12, 2, 4};
+        int[] result = ArrayAlgorithms.multiplyByNoModify(nums14, 6);
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
+        }
+        System.out.println();
+        // original array is NOT modified
+        for (int i = 0; i < nums14.length; i++) {
+            System.out.print(nums14[i] + " ");
+        }
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] nums15 = {5, 1, 3, 4, 7, 6};
+        ArrayAlgorithms.shiftLeft(nums15);
+// original nums15 array IS modified; all elements shifted left 1
+        for (int i = 0; i < nums15.length; i++) {
+            System.out.print(nums15[i] + " ");
+        }
+        System.out.println();
+        int[] nums16 = {1, 2, 3, 4, 5, 6, 7, 8};
+        ArrayAlgorithms.shiftLeft(nums16);
+// original nums16 array IS modified; all elements shifted left 1
+        for (int i = 0; i < nums16.length; i++) {
+            System.out.print(nums16[i] + " ");
+        }
+        System.out.println();
+// shift nums16 AGAIN:
+        ArrayAlgorithms.shiftLeft(nums16);
+        for (int i = 0; i < nums16.length; i++) {
+            System.out.print(nums16[i] + " ");
+        }
+        System.out.println();
+// shift nums16 A THIRD TIME:
+        ArrayAlgorithms.shiftLeft(nums16);
+        for (int i = 0; i < nums16.length; i++) {
+            System.out.print(nums16[i] + " ");
+        }
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] nums17 = {6, 1, 3, 4, 7, 5};
+        ArrayAlgorithms.shiftRight(nums17);
+// original nums17 array IS modified; all elements shifted right 1
+        for (int i = 0; i < nums17.length; i++) {
+            System.out.print(nums17[i] + " ");
+        }
+        System.out.println();
+        int[] nums18 = {1, 2, 3, 4, 5, 6, 7, 8};
+        ArrayAlgorithms.shiftRight(nums18);
+// original nums18 array IS modified; all elements shifted right 1
+        for (int i = 0; i < nums18.length; i++) {
+            System.out.print(nums18[i] + " ");
+        }
+        System.out.println();
+// shift nums18 AGAIN:
+        ArrayAlgorithms.shiftRight(nums18);
+        for (int i = 0; i < nums18.length; i++) {
+            System.out.print(nums18[i] + " ");
+        }
+        System.out.println();
+// shift nums18 A THIRD TIME:
+        ArrayAlgorithms.shiftRight(nums18);
+        for (int i = 0; i < nums18.length; i++) {
+            System.out.print(nums18[i] + " ");
+        }
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] even = {1, 2, 3, 4, 5, 6};
+        ArrayAlgorithms.reverse(even);
+        for (int i = 0; i < even.length; i++) {
+            System.out.print(even[i] + " ");
+        }
+        System.out.println();
+        int[] odd = {1, 2, 3, 4, 5, 6, 7};
+        ArrayAlgorithms.reverse(odd);
+        for (int i = 0; i < odd.length; i++) {
+            System.out.print(odd[i] + " ");
+        }
+        System.out.println();
+        int[] even2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        ArrayAlgorithms.reverse(even2);
+        for (int i = 0; i < even2.length; i++) {
+            System.out.print(even2[i] + " ");
+        }
+        System.out.println();
+        int[] odd2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        ArrayAlgorithms.reverse(odd2);
+        for (int i = 0; i < odd2.length; i++) {
+            System.out.print(odd2[i] + " ");
+        }
+        System.out.println();
+    }
+}
