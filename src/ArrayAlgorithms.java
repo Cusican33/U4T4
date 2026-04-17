@@ -112,16 +112,27 @@ public class ArrayAlgorithms
         numList[0] = temp;
     }
 
-    public static void reverse(int[] numList)
+    public static void reverseStrat1(int[] numList)
     {
         int[] rev = new int[numList.length];
-        for (int i = numList.length - 1; i > 0; i--)
+        for (int i = 0; i < numList.length; i++)
         {
-            rev[numList.length - i] = numList[i];
+            rev[i] = numList[i];
         }
-        for (int i = 0; i < numList.length - 1; i++)
+        for (int i = numList.length - 1; i >= 0; i--)
         {
-            numList[i] = rev[i];
+            numList[numList.length - i - 1] = rev[i];
+        }
+    }
+
+    public static void reverseStrat2(int[] numList)
+    {
+        int temp = 0;
+        for (int i = 0; i < numList.length / 2; i++)
+        {
+            temp = numList[i];
+            numList[i] = numList[numList.length - 1 - i];
+            numList[numList.length - 1 - i] = temp;
         }
     }
 }

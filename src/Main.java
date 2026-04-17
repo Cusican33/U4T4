@@ -206,28 +206,53 @@ public class Main
         System.out.println("\n --------------------------- \n");
 
         int[] even = {1, 2, 3, 4, 5, 6};
-        ArrayAlgorithms.reverse(even);
+        ArrayAlgorithms.reverseStrat1(even);
         for (int i = 0; i < even.length; i++) {
             System.out.print(even[i] + " ");
         }
         System.out.println();
         int[] odd = {1, 2, 3, 4, 5, 6, 7};
-        ArrayAlgorithms.reverse(odd);
+        ArrayAlgorithms.reverseStrat1(odd);
         for (int i = 0; i < odd.length; i++) {
             System.out.print(odd[i] + " ");
         }
         System.out.println();
         int[] even2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-        ArrayAlgorithms.reverse(even2);
+        ArrayAlgorithms.reverseStrat1(even2);
         for (int i = 0; i < even2.length; i++) {
             System.out.print(even2[i] + " ");
         }
         System.out.println();
         int[] odd2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-        ArrayAlgorithms.reverse(odd2);
+        ArrayAlgorithms.reverseStrat1(odd2);
         for (int i = 0; i < odd2.length; i++) {
             System.out.print(odd2[i] + " ");
         }
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] even3 = {1, 2, 3, 4, 5, 6};
+        ArrayAlgorithms.reverseStrat2(even3);
+        for (int i = 0; i < even3.length; i++) {
+            System.out.print(even3[i] + " ");
+        }
         System.out.println();
+        int[] odd3 = {1, 2, 3, 4, 5, 6, 7};
+        ArrayAlgorithms.reverseStrat2(odd3);
+        for (int i = 0; i < odd3.length; i++) {
+            System.out.print(odd3[i] + " ");
+        }
+        System.out.println();
+        int[] even4 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        ArrayAlgorithms.reverseStrat2(even4);
+        for (int i = 0; i < even4.length; i++) {
+            System.out.print(even4[i] + " ");
+        }
+        System.out.println();
+        int[] odd4 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        ArrayAlgorithms.reverseStrat2(odd4);
+        for (int i = 0; i < odd4.length; i++) {
+            System.out.print(odd4[i] + " ");
+        }
     }
 }
