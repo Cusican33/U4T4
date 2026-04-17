@@ -254,5 +254,35 @@ public class Main
         for (int i = 0; i < odd4.length; i++) {
             System.out.print(odd4[i] + " ");
         }
+
+        System.out.println("\n --------------------------- \n");
+
+        //warm up for traversing arrays 3
+        String[] names = {"Mateo", "Sofia", "David", "Ziggy", "Charlie"};
+        for (String name :  names)
+        {
+            System.out.println(name);
+        }
+        System.out.println();
+        int[] nums19 = {8, 4, 10, 5, 7, 11, 3, 9, 23, 6};
+        int sum = 0;
+        for (int num : nums19)
+        {
+            sum += num;
+        }
+        System.out.println(sum);
+
+        System.out.println("\n --------------------------- \n");
+
+        Person p1 = new Person("Adam", 12);
+        Person p2 = new Person("Barb", 15);
+        Person p3 = new Person("Cathy", 14);
+        Person p4 = new Person("Fred", 16);
+        Person[] people = {p1, p2, p3, p4};
+        for (Person p : people)
+        {
+            p.setName(p.getName().toUpperCase());
+            p.introduce();
+        }
     }
 }

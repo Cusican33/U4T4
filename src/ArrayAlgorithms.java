@@ -135,4 +135,13 @@ public class ArrayAlgorithms
             numList[numList.length - 1 - i] = temp;
         }
     }
+
+    public static String[] makeLowercase(String[] wordList)
+    {
+        String[] lowercase = new String[wordList.length];
+        for (int i = 0; i < wordList.length; i++)
+        {
+
+        }
+    }
 }
