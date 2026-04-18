@@ -179,16 +179,16 @@ public class ArrayAlgorithms
 
     public static int longestStreak(int[] nums)
     {
-        int streak = 0;
-        int maxStreak = 0;
+        int streak = 1;
+        int maxStreak = 1;
         int prevNum = 0;
         for (int num : nums)
         {
             if (num == prevNum) streak++;
-            else streak = 0;
+            else streak = 1;
             prevNum = num;
             if (streak > maxStreak) maxStreak++;
         }
-        return ++maxStreak;
+        return maxStreak;
     }
 }
