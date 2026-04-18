@@ -141,7 +141,54 @@ public class ArrayAlgorithms
         String[] lowercase = new String[wordList.length];
         for (int i = 0; i < wordList.length; i++)
         {
-
+            lowercase[i] = wordList[i].toLowerCase();
         }
+        return lowercase;
+    }
+
+    public static void makeUppercase(String[] wordList)
+    {
+        for (int i = 0; i < wordList.length; i++)
+        {
+            wordList[i] = wordList[i].toUpperCase();
+        }
+    }
+
+    public static int[] arrayMaximums(int[] intArr1, int[] intArr2)
+    {
+        int[] max = new int[intArr1.length];
+        for (int i = 0; i < intArr1.length; i++)
+        {
+            if(intArr1[i] > intArr2[i]) max[i] = intArr1[i];
+            else max[i] = intArr2[i];
+        }
+        return max;
+    }
+
+    public static int countConsecutiveDoubles(int[] numList)
+    {
+        int count = 0;
+        int prevNum = 0;
+        for (int num : numList)
+        {
+            if (num == prevNum) count++;
+            prevNum = num;
+        }
+        return count;
+    }
+
+    public static int longestStreak(int[] nums)
+    {
+        int streak = 0;
+        int maxStreak = 0;
+        int prevNum = 0;
+        for (int num : nums)
+        {
+            if (num == prevNum) streak++;
+            else streak = 0;
+            prevNum = num;
+            if (streak > maxStreak) maxStreak++;
+        }
+        return ++maxStreak;
     }
 }

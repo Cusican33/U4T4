@@ -122,14 +122,14 @@ public class Main
 
         int[] nums12 = {5, 10, 15, 12, 2, 4};
         ArrayAlgorithms.multiplyBy(nums12, 6);
-// original nums15 array IS modified
+// original nums25 array IS modified
         for (int i = 0; i < nums12.length; i++) {
             System.out.print(nums12[i] + " ");
         }
         System.out.println();
         int[] nums13 = {-5, -7, 14, 0, 5, 20, -30};
         ArrayAlgorithms.multiplyBy(nums13, -12);
-// original nums16 array IS modified
+// original nums26 array IS modified
         for (int i = 0; i < nums13.length; i++) {
             System.out.print(nums13[i] + " ");
         }
@@ -151,25 +151,25 @@ public class Main
 
         int[] nums15 = {5, 1, 3, 4, 7, 6};
         ArrayAlgorithms.shiftLeft(nums15);
-// original nums15 array IS modified; all elements shifted left 1
+// original nums25 array IS modified; all elements shifted left 1
         for (int i = 0; i < nums15.length; i++) {
             System.out.print(nums15[i] + " ");
         }
         System.out.println();
         int[] nums16 = {1, 2, 3, 4, 5, 6, 7, 8};
         ArrayAlgorithms.shiftLeft(nums16);
-// original nums16 array IS modified; all elements shifted left 1
+// original nums26 array IS modified; all elements shifted left 1
         for (int i = 0; i < nums16.length; i++) {
             System.out.print(nums16[i] + " ");
         }
         System.out.println();
-// shift nums16 AGAIN:
+// shift nums26 AGAIN:
         ArrayAlgorithms.shiftLeft(nums16);
         for (int i = 0; i < nums16.length; i++) {
             System.out.print(nums16[i] + " ");
         }
         System.out.println();
-// shift nums16 A THIRD TIME:
+// shift nums26 A THIRD TIME:
         ArrayAlgorithms.shiftLeft(nums16);
         for (int i = 0; i < nums16.length; i++) {
             System.out.print(nums16[i] + " ");
@@ -179,7 +179,7 @@ public class Main
 
         int[] nums17 = {6, 1, 3, 4, 7, 5};
         ArrayAlgorithms.shiftRight(nums17);
-// original nums17 array IS modified; all elements shifted right 1
+// original nums27 array IS modified; all elements shifted right 1
         for (int i = 0; i < nums17.length; i++) {
             System.out.print(nums17[i] + " ");
         }
@@ -284,5 +284,75 @@ public class Main
             p.setName(p.getName().toUpperCase());
             p.introduce();
         }
+
+        System.out.println("\n --------------------------- \n");
+
+        String[] strings5 = {"HELLO", "Halo", "Adam", "what", "booyAH", "WHY?"};
+        String[] lower = ArrayAlgorithms.makeLowercase(strings5);
+        for (String str : lower) {
+            System.out.print(str + " ");
+        }
+        System.out.println("\n\noriginal array not modified:");
+        for (String str : strings5) {
+            System.out.print(str + " ");
+        }
+        System.out.println();
+
+        System.out.println("\n --------------------------- \n");
+
+        String[] strings9 = {"HELlo", "Halo", "WHAT!", "Adam", "what", "booyAH", "WHY?", "for"};
+        ArrayAlgorithms.makeUppercase(strings9);
+        for (String str : strings9) {
+            System.out.print(str + " ");
+        }
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] arr1 = {2, 5, 6, 1, 0, -6, 10};
+        int[] arr2 = {1, 7, 6, -2, 8, -8, 8};
+        int[] maximums = ArrayAlgorithms.arrayMaximums(arr1, arr2);
+
+        for (int num : maximums) {
+            System.out.print(num + " ");
+        }
+        System.out.println("\n\noriginal arrays not modified:");
+        for (int num : arr1) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        for (int num : arr2) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] nums20 = {4, 7, 7, 3, 2, 2, 4, 4, 4, 6, 4, 6, 6};
+        int numDoubles = ArrayAlgorithms.countConsecutiveDoubles(nums20);
+        System.out.println(numDoubles);
+        int[] nums21 = {1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2};
+        int numDoubles2 = ArrayAlgorithms.countConsecutiveDoubles(nums21);
+        System.out.println(numDoubles2);
+        int[] nums22 = {1, 2, 1, 3, 1, 2, 1, 3, 1, 2, 1, 3};
+        int numDoubles3 = ArrayAlgorithms.countConsecutiveDoubles(nums22);
+        System.out.println(numDoubles3);
+
+        System.out.println("\n --------------------------- \n");
+
+        int[] nums23 = {10, 20, 10, 30, 10, 20, 10, 30, 10, 20, 10, 30};
+        int streak1 = ArrayAlgorithms.longestStreak(nums23);
+        System.out.println(streak1);
+        int[] nums24 = {10, 10, 20, 20, 20, 30, 30, 30, 30, 40, 40, 50};
+        int streak2 = ArrayAlgorithms.longestStreak(nums24);
+        System.out.println(streak2);
+        int[] nums25 = {10, 10, 10, 10, 10, 10, 20, 20, 30, 30, 30, 30};
+        int streak3 = ArrayAlgorithms.longestStreak(nums25);
+        System.out.println(streak3);
+        int[] nums26 = {20, 20, 30, 30, 30, 30, 10, 10, 10, 10, 10, 10};
+        int streak4 = ArrayAlgorithms.longestStreak(nums26);
+        System.out.println(streak4);
+        int[] nums27 = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+        int streak5 = ArrayAlgorithms.longestStreak(nums27);
+        System.out.println(streak5);
+
     }
 }
